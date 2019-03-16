@@ -1,0 +1,37 @@
+h1 {
+  color: #F3F9FB;
+  font-family: "Sniglet";
+  font-weight: bold;
+  font-size: 7rem;
+  margin: 50px;
+}
+
+img {
+  height: 80px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body {
+  background-color: #113F67;
+}
+
+footer {
+  color: #F3F9FB;
+  text-align: center;
+  font-family: "Sniglet";
+  padding-top: 50px;
+}
+
+.cat {
+  height: 250px;
+  padding-bottom: 60px;
+}
+
+.catfood {
+  display: inline-block;
+}
+
+.container {
+  text-align: center;
+}
