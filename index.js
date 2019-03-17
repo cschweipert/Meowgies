@@ -13,7 +13,10 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 
-
+/*
+  openMouth()
+  Toggles the cat element's image source to "opened mouth" image.
+*/
 function openMouth()
 {
   var mouthImagePath = "/images/cat-face-mouth-open.png";
@@ -21,6 +24,10 @@ function openMouth()
   $cat.src = mouthImagePath;
 }
 
+/*
+  closeMouth()
+  Toggles the cat element's image source to "closed mouth" image.
+*/
 function closeMouth()
 {
   var mouthImagePath = "/images/cat-face-mouth-closed.png";
@@ -28,8 +35,27 @@ function closeMouth()
   $cat.src = mouthImagePath;
 }
 
-var randomNumber1 = Math.floor(Math.random() * 5) + 1; //random number between 1-5
+/*
+  getRandomFood()
+  Returns a random food item that we can use to trigger our Meowgies!
+*/
+function getRandomFood()
+{
+  var randomNumber = Math.floor(Math.random() * 5) + 1; //random number between 1-5
 
-var randomImageSource1 = "images/food" + randomNumber1 + ".png"; //images/food1.png - food5.png
+  var randomImageSource = "images/food" + randomNumber + ".png"; //images/food1.png - food5.png
 
-var isMouthOpen = false;
+  return randomImageSource;
+}
+
+/*
+This is the food that, when dropped into the cat's mouth,
+will trigger the meowgies to appear.
+
+Right now it is null, but in the code-init block, it is
+set to a random food!
+*/
+meowgieTriggerFood = getRandomFood();
+
+console.log(meowgieTriggerFood);
+
