@@ -16,27 +16,27 @@
     <h1>Meowgies</h1>
 
     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <img class="cat" src="images/cat-face.png" alt="cat">
+      <img id="cat" class="cat" src="images/cat-face-mouth-closed.png" alt="cat">
     </div>
 
     <div class="catfood">
-      <img id=drag1 draggable="true" ondragstart="drag(event)" src="images/food1.png" alt="blowfish">
+      <img id=drag1 draggable="true" ondragstart="drag(event); openMouth();" ondragend="closeMouth()" src="images/food1.png" alt="blowfish">
     </div>
 
     <div class="catfood">
-      <img id=drag2 draggable="true" ondragstart="drag(event)" src="images/food2.png" alt="sushi">
+      <img id=drag2 draggable="true" ondragstart="drag(event); openMouth();" ondragend="closeMouth()" src="images/food2.png" alt="sushi">
     </div>
 
     <div class="catfood">
-      <img id=drag3 draggable="true" ondragstart="drag(event)" src="images/food3.png" alt="cheese-wedge">
+      <img id=drag3 draggable="true" ondragstart="drag(event); openMouth();" ondragend="closeMouth()" src="images/food3.png" alt="cheese-wedge">
     </div>
 
     <div class="catfood">
-      <img id=drag4 draggable="true" ondragstart="drag(event)" src="images/food4.png" alt="mouse">
+      <img id=drag4 draggable="true" ondragstart="drag(event); openMouth();" ondragend="closeMouth()" src="images/food4.png" alt="mouse">
     </div>
 
     <div class="catfood">
-      <img id=drag5 draggable="true" ondragstart="drag(event)" src="images/food5.png" alt="spider">
+      <img id=drag5 draggable="true" ondragstart="drag(event); openMouth();" ondragend="closeMouth()" src="images/food5.png" alt="spider">
     </div>
 
   </div>
