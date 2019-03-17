@@ -10,7 +10,13 @@ function drag(ev) {
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+  var $food = document.getElementById(data); // I prepend the variable with a '$' so that it's easier to see that it is a DOM element (special).
+  ev.target.appendChild($food);
+  var foodName = $food.id.replace('drag','food'); // Ok, this isn't glamorous, but it works! All it does is get the 'ID' name from the $food DOM element and replace the word 'drag' with 'food'.
+
+  if (isFoodTrigger(foodName)) {
+    alert("This is the trigger food!");
+  }
 }
 
 /*
@@ -42,10 +48,22 @@ function closeMouth()
 function getRandomFood()
 {
   var randomNumber = Math.floor(Math.random() * 5) + 1; //random number between 1-5
+  var randomFood = "food" + randomNumber; //food1
+  return randomFood;
+}
 
-  var randomImageSource = "images/food" + randomNumber + ".png"; //images/food1.png - food5.png
-
-  return randomImageSource;
+/*
+  isFoodTrigger()
+  Returns true/false depending on if the food passed in
+  via parameter matches the meowgieTriggerFood variable.
+*/
+function isFoodTrigger(food)
+{
+  if (food === meowgieTriggerFood) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /*
@@ -56,6 +74,4 @@ Right now it is null, but in the code-init block, it is
 set to a random food!
 */
 meowgieTriggerFood = getRandomFood();
-
-console.log(meowgieTriggerFood);
 
