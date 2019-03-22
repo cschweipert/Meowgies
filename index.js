@@ -75,14 +75,26 @@ set to a random food!
 */
 meowgieTriggerFood = getRandomFood();
 
-var meowgies = document.getElementsByClassName("meowgies");
+var score = 0;
 
-for (var i = 0; i < meowgies.length; i++) {
+var $meowgies = document.getElementsByClassName("meowgies");
 
-  var meowgie = meowgies[i];
+for (var i = 0; i < $meowgies.length; i++) {
 
-  meowgie.style.top = (Math.floor(Math.random() * 99) + 1) + "%";
+  var $meowgie = $meowgies[i];
 
-  meowgie.style.left = (Math.floor(Math.random() * 99) + 1) + "%";
+  $meowgie.style.top = (Math.floor(Math.random() * 99) + 1) + "%";
+
+  $meowgie.style.left = (Math.floor(Math.random() * 99) + 1) + "%";
+
+  $meowgie.addEventListener("click", function(){
+    this.style.display = "none";
+    score = score + 1;
+    document.getElementById("score").value = score;
+
+    if (score == $meowgies.length){
+      alert("you win!");
+    }
+  });
 
 }
