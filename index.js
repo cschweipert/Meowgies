@@ -25,7 +25,7 @@ function drop(ev) {
 */
 function openMouth()
 {
-  var mouthImagePath = "/images/cat-face-mouth-open.png";
+  var mouthImagePath = "./images/cat-face-mouth-open.png";
   var $cat = document.getElementById('cat');
   $cat.src = mouthImagePath;
 }
@@ -74,4 +74,3 @@ Right now it is null, but in the code-init block, it is
 set to a random food!
 */
 meowgieTriggerFood = getRandomFood();
-
