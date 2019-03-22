@@ -74,3 +74,15 @@ Right now it is null, but in the code-init block, it is
 set to a random food!
 */
 meowgieTriggerFood = getRandomFood();
+
+var meowgies = document.getElementsByClassName("meowgies");
+
+for (var i = 0; i < meowgies.length; i++) {
+
+  var meowgie = meowgies[i];
+
+  meowgie.style.top = (Math.floor(Math.random() * 99) + 1) + "%";
+
+  meowgie.style.left = (Math.floor(Math.random() * 99) + 1) + "%";
+
+}
