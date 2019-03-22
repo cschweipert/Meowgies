@@ -36,7 +36,7 @@ function openMouth()
 */
 function closeMouth()
 {
-  var mouthImagePath = "/images/cat-face-mouth-closed.png";
+  var mouthImagePath = "./images/cat-face-mouth-closed.png";
   var $cat = document.getElementById('cat');
   $cat.src = mouthImagePath;
 }
