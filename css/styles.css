@@ -6,6 +6,11 @@ h1 {
   margin: 50px;
 }
 
+h2 {
+  color: #F3F9FB;
+  font-family: "Sniglet";
+}
+
 img {
   height: 80px;
   padding-left: 15px;
@@ -46,5 +51,14 @@ footer {
   position: fixed;
   top: 100px;
   left: 100px;
+}
 
+#scoreboard {
+  position: fixed;
+  top: 9%;
+  left: 80%;
+}
+
+#button {
+  font-family: "Sniglet";
 }
