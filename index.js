@@ -96,5 +96,4 @@ for (var i = 0; i < $meowgies.length; i++) {
       alert("you win!");
     }
   });
-
 }
